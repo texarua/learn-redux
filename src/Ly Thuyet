@@ -1,0 +1,34 @@
+npm install --save redux react-redux
+
+Giai thich bang code cach hoat dong redux hook:
+
+làm việc với redux thông qua hook:
+- useSelector();
+- useDispatch()
+
+1. Setup store
+- Reduces & root reducer
+- Action creators
+- Store
+
+2. Setup redux provider
+- Allow redux store to be accessible from anywhere of the app
+
+3. connect to redux store from component
+
+*****Khi tạo  reducer cần return về  [...state] để  tránh bị thiếu params của init state
+const state = {
+        list: ['123', 'abc'],
+        selectedId : null
+    }
+    
+    return (
+        <div>
+            {console.log({
+                ...state,
+                list: ['change1', 'change2']
+            })}
+        </div>
+    )
+   
+ 
